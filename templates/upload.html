@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+ <html> 
+    <head>
+        <title>upload_data</title>
+         <meta charset="utf-8"/>
+         
+        <style>
+            .body1 { max-width: 500px;
+                     margin: auto;}
+            .button2 {background-color:#008CBA;padding: 4px 30px;font-size: 16px;margin: 4px 2px;}
+            .button3 {background-color:rgb(224, 93, 121);padding: 6px 30px;font-size: 16px;margin: 4px 2px;}
+        </style>
+    </head>
+    <body class ="body1"> 
+            <button class = "button3" onclick="dataUpload()" > for upload</button>
+            
+       <a href="sqlsearch.html"><button class="button2">for search</button></a>
+       <p id= "bar"></p>
+       
+    </body>
+    <script>
+       
+        function dataUpload() {
+             var c = document.getElementById("bar");
+             var xhttp = new XMLHttpRequest();
+             xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+             
+             data = JSON.parse(this.responseText);
+             console.log(data['name']);
+             
+            }
+            c.innerHTML = "new uploaded name is"+" " + data['name'] + " "+"from" +" " +data['address']+" " + "and" +" "+ data['age']+" " + "old";
+            };
+        xhttp.open("GET", "http://localhost:5001/", true);
+        xhttp.send();
+        }
+
+    </script>
+
+
+
+</html>
