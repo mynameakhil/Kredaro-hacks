@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.medqry {
+  padding: 40px;
+  color: white;
+  text-align: center;
+}
+/* phone*/
+@media only screen and (max-width: 600px) {
+    .medqry {background: rgb(48, 29, 29);}
+}
+
+/* tablet */
+@media only screen and (min-width: 600px) {
+  .medqry {background: green;}
+}
+
+/* small laptop screen */
+@media only screen and (min-width: 768px) {
+  .medqry {background: blue;}
+} 
+
+/* desktop/lap top */
+@media only screen and (min-width: 992px) {
+  .medqry {background: orange;}
+} 
+
+/* large screen */
+@media only screen and (min-width: 1200px) {
+  .medqry {background: rgb(221, 12, 47);}
+}
+@media only screen and (orientation: landscape) {
+  .medqry {
+    padding: 100px;
+  }
+}
+ @media only screen and (max-width: 600px) {
+  .medqry {
+    display: none;
+  }
+} 
+@media only screen and (min-width: 992px) {
+  .medqry {
+    font-size: 30px;
+  }
+}
+</style>
+</head>
+<body>
+    <div class="medqry">checking</div>
+
+</body>
+</html>
