@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>code challange</title>
+
+</head>
+
+<body>
+
+</body>
+
+
+
+
+<script>
+    // var johnsHeight = 1.65;
+    // var johnsWeight = 80;
+
+    // var marksHeight = 1.70;
+    // var marksWeight = 90;
+
+    // johnsBmi = johnsHeight / (johnsWeight * johnsWeight);
+    // marksBmi = marksHeight / (marksWeight * marksWeight);
+    // var information = (marksBmi > johnsBmi);
+    // console.log("marks bmi's higher than johns", information);
+    // var johnsTeamsAvarage = (89 + 120 + 103) / 3;
+    // var mikesTeamsAvarage = (116 + 94 + 123) / 3;
+    // if (johnsTeamsAvarage > mikesTeamsAvarage) {
+    //     console.log("avarage winner is johns team and team avg is:", johnsTeamsAvarage);
+    // } else {
+    //     console.log("avarage winner is mike's team and team avg is:", mikesTeamsAvarage);
+
+    // }
+    // var tipAmount = [];
+    // var totalAmout = [];
+    // bill(124);
+    // bill(48);
+    // bill(268);
+
+
+    // function bill(amount) {
+    //     if (amount < 50) {
+    //         var tip = amount * .2;
+    //         // console.log(tip);
+    //         tipAmount.push(tip);
+    //         console.log(tipAmount);
+    //         var tt = amount + tip;
+    //         totalAmout.push(tt);
+
+    //     } else if (amount >= 50 && amount < 200) {
+    //         var tip = amount * .15;
+    //         tipAmount.push(tip);
+    //         var tt = amount + tip;
+    //         totalAmout.push(tt);
+    //     } else {
+    //         var tip = amount * 0.1;
+    //         tipAmount.push(tip);
+    //         var tt = amount + tip;
+    //         totalAmout.push(tt);
+    //     }
+
+    // }
+    // console.log(tipAmount);
+    //console.log(totalAmout);
+    var johns = {
+        fullName: 'johns smith',
+        mass: 75,
+        height: 1.70,
+        calBMI: function () {
+            this.bmi = this.mass / (this.height * this.height);
+            return this.bmi;
+        }
+
+    };
+    var marks = {
+        fullName: 'markss killer',
+        mass: 90,
+        height: 1.70,
+        calBMI: function () {
+            this.bmi = this.mass / (this.height * this.height);
+            return this.bmi;
+        }
+
+    };
+    if (johns.calBMI() > marks.calBMI()) {
+        console.log(johns.fullName + "has" + johns.bmi);
+    } else {
+        console.log(johns.fullName + "has" + johns.bmi);
+
+
+    }
+</script>
+
+</html>
